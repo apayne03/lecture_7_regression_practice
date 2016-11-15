@@ -30,15 +30,25 @@ block2 <- lm(jobperf ~ gma + con, data = my.data)
 apa.reg.table(block1, block2)
 # Delta R2 tells you the semi-partial correlation of conscientiousness (.10**)
 
+# Conscientiousness ratings accounted for an additional 10 percent, sr2 = .10, t(497)=8.61,p<.001, 
+# of the variance in job performance ratings beyond GMA alone bringing the total percentage of variance
+# accounted for to 36 percent, R2 = .36, F(2,497)=137.50,p<.001.
+
 block3 <- lm(jobperf ~ gma, data = my.data)
 block4 <- lm(jobperf ~ gma + ac, data = my.data)
 apa.reg.table(block3, block4)
 # Delta R2 tells you the semi-partial correlation of AC (.02**)
 
+# Assessment centre ratings accounted for an additional 2 percent, sr2 = .02, t(497)=3.48,p<.01, 
+# of the variance in job performance ratings beyond GMA alone bringing the total percentage of variance
+# accounted for to 28 percent, R2 = .28, F(2,497)=95.56,p<.001.
+
 block5 <- lm(jobperf ~ gma, data = my.data)
 block6 <- lm(jobperf ~ gma + graph, data = my.data)
 apa.reg.table(block5, block6)
 # Delta R2 tells you the semi-partial correlation of graphology (.00)
+
+# Graphology ratings accounted for no additional variance in job performance ratings beyond GMA, sr2 = .00, t(497)=.52, ns.
 
 
 
